@@ -3,13 +3,6 @@ const express = require('express');
 const contenedor = new Contenedor('productos.txt');
 
 const app = express();
-const server = app.listen(8080 || process.env.PORT,()=>{
-    console.log(`Servidor escuchando en el puerto ${server.address().port}`);
-});
-
-server.on("error", (error)=>{
-    console.log(error);
-})
 
 app.get('/productos', async (req,res)=>{
     try {
@@ -32,3 +25,11 @@ app.get('/productoRandom', async (req,res)=>{
         console.log(error);
     }  
 });
+
+const server = app.listen(8080 || process.env.PORT,()=>{
+    console.log(`Servidor escuchando en el puerto ${server.address().port}`);
+});
+
+server.on("error", (error)=>{
+    console.log(error);
+})
