@@ -1,11 +1,3 @@
-/*
-====================================================================================
-Alumno: German Luis Muller
-Desafio Entregable Numero: 3 (Version 1)
-Fecha: 23/09/2021
-====================================================================================
-*/
-
 const Contenedor = require('./contenedor.js')
 const express = require('express');
 const contenedor = new Contenedor('productos.txt');
